@@ -1,0 +1,18 @@
+﻿body {
+    background-color: aliceblue;
+    text-align: center;
+    background-image: url('img_Citas/002.jpg');
+}
+h1{
+    text-align: center;
+    color: black;
+    font-size: 50px;
+}
+
+#form1 {
+    color: black;
+}
+.1{
+    color:red;
+}
+

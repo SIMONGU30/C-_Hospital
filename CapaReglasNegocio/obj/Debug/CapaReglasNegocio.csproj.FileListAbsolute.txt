@@ -1,0 +1,11 @@
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\bin\Debug\CapaReglasNegocio.dll
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\bin\Debug\CapaReglasNegocio.pdb
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\bin\Debug\CapaDatos.dll
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\obj\Debug\CapaReglasNegocio.csproj.AssemblyReference.cache
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\obj\Debug\CapaReglasNegocio.csproj.CoreCompileInputs.cache
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\obj\Debug\CapaReglasNegocio.csproj.CopyComplete
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\obj\Debug\CapaReglasNegocio.dll
+C:\Users\saimon\OneDrive\Documentos\C#\Hospital\CapaReglasNegocio\obj\Debug\CapaReglasNegocio.pdb
