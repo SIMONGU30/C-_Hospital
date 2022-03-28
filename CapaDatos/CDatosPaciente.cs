@@ -15,6 +15,31 @@ namespace CapaDatos
         CConexion oConexion = new CConexion();
         SqlCommand oCmd = new SqlCommand();
 
+
+
+        public DataSet ConsultarPaciente(CEntidadPaceientes ocitas)
+        {
+            try
+            {
+                oCmd.Connection = oConexion.conectar("BDHospital");
+                oCmd.CommandType = CommandType.StoredProcedure;
+                oCmd.CommandText = "sp_consultar_paciente";
+                oCmd.Parameters.Add("@pId_paciente", ocitas.Id_paciente1);
+
+                // oCmd.Parameters.Add("@pId_paciente", ocitas.Id_paciente1);
+                // oCmd.Parameters.Add("@pid_medico", ocitas.Id_medico);
+                SqlDataAdapter da = new SqlDataAdapter(oCmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.Message);
+            }
+
+        }
+
         public bool Guardar_Paciente(CEntidadPaceientes ocitas)
         {
             try

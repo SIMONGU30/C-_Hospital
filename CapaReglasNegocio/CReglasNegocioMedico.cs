@@ -17,6 +17,7 @@ namespace CapaReglasNegocio
         {
             return oDatosMedico.ConsultarMedico(oCitas);
         }
+
         public bool Guardar_Medico(CEntidadMedico ocitas)
         {
             return oDatosMedico.Guardar_Medico(ocitas);

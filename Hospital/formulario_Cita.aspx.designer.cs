@@ -105,13 +105,13 @@ namespace Hospital
         protected global::System.Web.UI.WebControls.TextBox TextBoxIdPaciente;
 
         /// <summary>
-        /// Control LabelNombrePaciente.
+        /// Control ButtonNombrePaciente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelNombrePaciente;
+        protected global::System.Web.UI.WebControls.Button ButtonNombrePaciente;
 
         /// <summary>
         /// Control LabelIdMedico.
@@ -132,13 +132,13 @@ namespace Hospital
         protected global::System.Web.UI.WebControls.TextBox TextBoxIdMedico;
 
         /// <summary>
-        /// Control LabelNombreMedico.
+        /// Control ButtonNombreMedico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelNombreMedico;
+        protected global::System.Web.UI.WebControls.Button ButtonNombreMedico;
 
         /// <summary>
         /// Control LabelValor.

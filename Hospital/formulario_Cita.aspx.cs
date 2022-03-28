@@ -16,6 +16,12 @@ namespace Hospital
         CEntidadCitas oEntidadCitas = new CEntidadCitas();
         CReglasNegocioCita oRegNCitas = new CReglasNegocioCita();
 
+        CEntidadPaceientes oEntidadPacientes=new CEntidadPaceientes();
+        CReglasNegocioPaciente oRegPaciente = new CReglasNegocioPaciente();
+
+        CEntidadMedico oEntidadMedico=new CEntidadMedico();
+        CReglasNegocioMedico oReglasNegocioMedico=new CReglasNegocioMedico();
+
 
 
         protected void Limpiar()
@@ -23,12 +29,14 @@ namespace Hospital
             TextBoxFecha.Text = "";
             TextBoxIdPaciente.Text = "";
             TextBoxIdMedico.Text = "";
+            TextBoxHora.Text = "";
             TextBoxValor.Text = "";
             TextBoxDiagnostico.Text = "";
             TextBoxAcompañante.Text = "";
             TextBoxActivo.Text = "";
-            LabelNombrePaciente.Text = "";
-            LabelNombreMedico.Text = "";
+            LabelMensajeCita.Text = "";
+            ButtonNombrePaciente.Text = "PACIENTE";
+            ButtonNombreMedico.Text = "MEDICO";
         }
         protected void Activar()
         {
@@ -40,8 +48,8 @@ namespace Hospital
             TextBoxDiagnostico.Enabled = true;
             TextBoxAcompañante.Enabled = true;
             TextBoxActivo.Enabled = true;
-            LabelNombrePaciente.Enabled = true;
-            LabelNombreMedico.Enabled = true;
+            ButtonNombrePaciente.Enabled = true;
+            ButtonNombreMedico.Enabled = true;
             ButtonGuardar.Enabled = true;
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -85,11 +93,13 @@ namespace Hospital
                     TextBoxIdMedico.Text = ds.Tables[0].Rows[0]["id_Medico"].ToString();
                     TextBoxValor.Text = ds.Tables[0].Rows[0]["valor"].ToString();
                     TextBoxDiagnostico.Text = ds.Tables[0].Rows[0]["diagnostico"].ToString();
-
                     TextBoxAcompañante.Text = ds.Tables[0].Rows[0]["nom_acompanante"].ToString();
+                    ButtonNombreMedico.Text = ds.Tables[2].Rows[0]["nom_medico"].ToString();
+                    ButtonNombrePaciente.Text = ds.Tables[1].Rows[0]["nom_paciente"].ToString();
+
                     TextBoxActivo.Text = ds.Tables[0].Rows[0]["activo"].ToString();
-                    LabelNombrePaciente.Text = ds.Tables[1].Rows[0]["nom_paciente"].ToString();
-                    LabelNombreMedico.Text = ds.Tables[2].Rows[0]["nom_medico"].ToString();
+                   
+                   
 
 
                 }
@@ -133,6 +143,77 @@ namespace Hospital
             {
                 LabelMensajeCita.Text = "ERROR.......... al guardar el registro";
             }
+        }
+
+        protected void ButtonNombreMedico_Click(object sender, EventArgs e)
+        {
+            if (TextBoxIdMedico.Text == "")
+            {
+                TextBoxIdMedico.Text = "No se ha Digitado codigo de cita";
+                TextBoxIdMedico.Focus();
+            }
+
+
+            else
+            {
+
+                DataSet ds = new DataSet();
+
+                oEntidadMedico.Id_medico = TextBoxIdMedico.Text;
+                ds = oReglasNegocioMedico.Consultar_Medico(oEntidadMedico);
+
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    TextBoxIdMedico.Text = "Medico no existe";
+                    TextBoxIdMedico.Focus();
+
+                    //Limpiar();
+                    // Activar();
+                   // ButtonNombreMedico.Text = ds.Tables[2].Rows[0]["nom_medico"].ToString();
+                }
+                else
+                {
+                    ButtonNombreMedico.Text = ds.Tables[0].Rows[0]["nom_medico"].ToString();
+                }
+
+            }
+
+           
+        }
+
+        protected void ButtonNombrePaciente_Click(object sender, EventArgs e)
+        {
+           
+
+
+            if (TextBoxIdPaciente.Text=="")
+            {
+                TextBoxIdPaciente.Text = "No se ha Digitado codigo de cita";
+                TextBoxIdPaciente.Focus();
+            }
+            else
+            {
+                DataSet ds = new DataSet();
+
+                oEntidadPacientes.Id_paciente1 = TextBoxIdPaciente.Text;
+                ds = oRegPaciente.Consultar_Paciente(oEntidadPacientes);
+
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                     TextBoxIdPaciente.Text = " Paciente no existe ";
+                      TextBoxIdPaciente.Focus();
+                    // Limpiar();
+                    //  Activar();
+                    //ButtonNombrePaciente.Text = ds.Tables[1].Rows[0]["nom_paciente"].ToString();
+                }
+                else
+                {
+                    ButtonNombrePaciente.Text = ds.Tables[0].Rows[0]["nom_paciente"].ToString();
+                }
+               
+            }
+
+            
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Hospital
         protected void ButtonGuardarPaciente_Click(object sender, EventArgs e)
         {
 
-            oEntidadPaciente.Id_paciente1 = TextBoxTelefonoPaciente.Text;
+            oEntidadPaciente.Id_paciente1 = TextBoxPacientePaciente.Text;
             oEntidadPaciente.Tip_doc = TextBoxDocumentoPaciente.Text;
             oEntidadPaciente.Nom_paciente = TextBoxNombrePaciente.Text;
             oEntidadPaciente.Dir_paciente = TextBoxDireccionPaciente.Text;

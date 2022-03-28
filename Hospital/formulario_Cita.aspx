@@ -28,12 +28,12 @@
 
         <asp:Label ID="LabelIdPaciente"  runat="server" Text="Identificacion Paciente"></asp:Label><br />
         <asp:TextBox ID="TextBoxIdPaciente" runat="server" Enabled="False"  ></asp:TextBox>
-        <asp:Label ID="LabelNombrePaciente" runat="server" Text=""></asp:Label><br />
-           
+        <asp:Button ID="ButtonNombrePaciente" runat="server" Text="PACIENTE" OnClick="ButtonNombrePaciente_Click" />  <br />
+
         <asp:Label ID="LabelIdMedico" runat="server" Text="Identificacion Medico "></asp:Label><br />
         <asp:TextBox ID="TextBoxIdMedico" runat="server" Enabled="False" ></asp:TextBox>
-        <asp:Label ID="LabelNombreMedico" runat="server" Text=""></asp:Label><br />
-
+        <asp:Button ID="ButtonNombreMedico" runat="server" Text="MEDICO" OnClick="ButtonNombreMedico_Click" />
+        <br />
 
         <asp:Label ID="LabelValor"  runat="server" Text="Valor de la Cita"></asp:Label><br />
         <asp:TextBox ID="TextBoxValor" runat="server" Enabled="False" ></asp:TextBox><br />
@@ -55,7 +55,7 @@
 
         <asp:Button ID="ButtonGuardar" runat="server" CssClass="form-control-sm  mt-4" Text="Guardar" Enabled="False" OnClick="ButtonGuardar_Click" />
 
-        <asp:Button ID="ButtonLimpiar" runat="server" CssClass="form-control-sm  mt-4" Text="Limpiar" OnClick="ButtonLimpiar_Click" Enabled="False" />
+        <asp:Button ID="ButtonLimpiar" runat="server" CssClass="form-control-sm  mt-4" Text="Limpiar" OnClick="ButtonLimpiar_Click"  />
        
        
     </form>

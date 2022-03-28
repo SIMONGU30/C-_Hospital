@@ -23,6 +23,8 @@ namespace CapaDatos
                 oCmd.CommandType = CommandType.StoredProcedure;
                 oCmd.CommandText = "sp_consultar_citas";
                 oCmd.Parameters.Add("@pcod_cita", ocitas.Cod_cita);
+               // oCmd.Parameters.Add("@pId_paciente", ocitas.Id_paciente1);
+               // oCmd.Parameters.Add("@pid_medico", ocitas.Id_medico);
                 SqlDataAdapter da=new  SqlDataAdapter(oCmd);
                 DataSet ds= new DataSet();
                 da.Fill(ds);
